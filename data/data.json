@@ -1,0 +1,159 @@
+// About
+{"label": "name", "info": "Nathan Eng", "tags": "about"}
+{"label": "preferred name", "info": "Nathan"}
+{"label": "me", "info": "This is what I look like (right)"}
+{"label": "pronouns", "info": "he/him", "tags": ["sex", "gender", "about"]}
+{"label": "sex", "info": "male", "tags": ["pronouns", "gender"]}
+{"label": "ethnicity", "info": "Chinese, Indian, Caucasian"}
+{"label": "nationality", "info": "U.S. Citizen", "tags": "about"}
+
+// More about + random info
+{"label": "home town", "info": "Beaverton, OR"}
+{"label": "current location", "info": "Beaverton, OR", "tags": "about"}
+{"label": "family", "info": "my mother, father, 2 sisters, and my dog"}
+{"label": "siblings", "info": "2 sisters", "tags": "family"}
+{"label": "pets", "info": "Misty, a 5-year-old golden retriever!"}
+{"label": "age", "info": "22"}
+{"label": "height", "info": "5'8\""}
+{"label": "astrological sign", "info": "Libra"}
+
+{"label": "fears", "info": "spiders", "tags": "scared"}
+{"label": "typing speed", "info": "130 WPM", "tags": "how fast can I type"}
+
+
+// Hobbies
+{"label": "sports", "info": "Track and Field, Cross Country"}
+{"label": "hobbies", "info": "videography"}
+{"label": "hobbies", "info": "running"}
+{"label": "hobbies", "info": "tennis"}
+{"label": "hobbies", "info": "football/soccer"}
+{"label": "hobbies", "info": "hiking"}
+{"label": "hobbies", "info": "spending time with my dog"}
+{"label": "hobbies", "info": "biking"}
+{"label": "hobbies", "info": "stop motion"}
+{"label": "hobbies", "info": "VFX animation"}
+{"label": "hobbies", "info": "digital drawing"}
+{"label": "hobbies", "info": "coding"}
+
+// Favorites
+{"label": "favorite color", "info": "baby blue"}
+{"label": "favorite city", "info": "New York City"}
+{"label": "favorite coding language", "info": "Python"}
+{"label": "favorite subject", "info": "computer science"}
+
+// Favorite music
+{"label": "favorite artists", "info": "Doja Cat", "category": "music"}
+{"label": "favorite artists", "info": "Key Glock", "category": "music"}
+{"label": "favorite artists", "info": "Rihanna", "category": "music"}
+{"label": "favorite artists", "info": "Chief Keef", "category": "music"}
+{"label": "favorite artists", "info": "SZA", "category": "music"}
+{"label": "favorite artists", "info": "Claire Rosinkranz", "category": "music"}
+{"label": "favorite artists", "info": "Kendrick Lamar", "category": "music"}
+{"label": "favorite artists", "info": "Vampire Weekend", "category": "music"}
+{"label": "favorite artists", "info": "Kodak Black", "category": "music"}
+{"label": "favorite artists", "info": "Drake", "category": "music"}
+{"label": "favorite artists", "info": "Lorde", "category": "music"}
+{"label": "favorite artists", "info": "The Cranberries", "category": "music"}
+{"label": "favorite artists", "info": "BigXthaPlug", "category": "music"}
+{"label": "favorite artists", "info": "Clairo", "category": "music"}
+{"label": "favorite artists", "info": "Cage The Elephant", "category": "music"}
+{"label": "favorite artists", "info": "The Weeknd", "category": "music"}
+{"label": "favorite artists", "info": "Florence + The Machine", "category": "music"}
+
+{"label": "favorite songs", "name": "Nice For What", "by": "Drake", "link": "https://open.spotify.com/track/3CA9pLiwRIGtUBiMjbZmRw", "image": "nice_for_what.jpg", "category": "music"}
+{"label": "favorite songs", "name": "Karma", "by": "Taylor Swift", "link": "https://open.spotify.com/track/7KokYm8cMIXCsGVmUvKtqf", "image": "karma.jpg", "category": "music"}
+{"label": "favorite songs", "name": "Ojitos Lindos", "by": "Bad Bunny, Bomba Estéreo", "link": "https://open.spotify.com/track/3k3NWokhRRkEPhCzPmV8TW", "image": "ojitos_lindos.jpg", "category": "music"}
+{"label": "favorite songs", "name": "Sweet FA", "by": "Peach Pit", "link": "https://open.spotify.com/album/1lhF5c8Q9bzYNwGFwQgYnP", "image": "sweet_fa.jpg", "category": "music"}
+{"label": "favorite songs", "name": "I Like You (A Happier Song)", "by": "Post Malone, Doja Cat", "link": "https://open.spotify.com/track/0O6u0VJ46W86TxN9wgyqDj", "image": "i_like_you.jpg", "category": "music"}
+{"label": "favorite songs", "name": "Cruel Summer", "by": "Taylor Swift", "link": "https://open.spotify.com/track/1BxfuPKGuaTgP7aM0Bbdwr", "image": "cruel_summer.jpg", "category": "music"}
+{"label": "favorite songs", "name": "Die Hard", "by": "Kendrick Lamar", "link": "https://open.spotify.com/track/2g6tReTlM2Akp41g0HaeXN", "image": "die_hard.jpg", "category": "music"}
+{"label": "favorite songs", "name": "i n t e r l u d e", "by": "J. Cole", "link": "https://open.spotify.com/track/2NJu5JtZLPmmuZF7Lr4Arr", "image": "interlude.jpg", "category": "music"}
+{"label": "favorite songs", "name": "Until I Found You", "by": "Stephen Sanchez", "link": "https://open.spotify.com/album/18CtLoAMTr7F8ngtuM6D8i", "image": "until_i_found_you.jpg", "category": "music"}
+{"label": "favorite songs", "name": "Heat Waves", "by": "Glass Animals", "link": "https://open.spotify.com/album/69K1zrf6TkXHdYUO8n2qVi", "image": "heat_waves.jpg", "category": "music"}
+{"label": "favorite songs", "name": "Team", "by": "Lorde", "link": "https://open.spotify.com/track/3G6hD9B2ZHOsgf4WfNu7X1", "image": "team.jpg", "category": "music"}
+{"label": "favorite songs", "name": "Third Eye", "by": "Florence + The Machine", "link": "https://open.spotify.com/track/7Mz95vPtFlDGIiZ5d1XdT3", "image": "third_eye.jpg", "category": "music"}
+{"label": "favorite songs", "name": "A-Punk", "by": "Vampire Weekend", "link": "https://open.spotify.com/track/5dKBaysNJtfpyNTRa5lqDb", "image": "a-punk.jpg", "category": "music"}
+{"label": "favorite songs", "name": "MESS U MADE", "by": "MICHELLE", "link": "https://open.spotify.com/track/7xW3rU5rzv4ghw0h8APxuH", "image": "mess_u_made.jpg", "category": "music"}
+{"label": "favorite songs", "name": "Die For You", "by": "The Weeknd", "link": "https://open.spotify.com/track/2Ch7LmS7r2Gy2kc64wv3Bz", "image": "die_for_you.jpg", "category": "music"}
+{"label": "favorite songs", "name": "golden hour", "by": "JVKE", "link": "https://open.spotify.com/track/4yNk9iz9WVJikRFle3XEvn", "image": "golden_hour.jpg", "category": "music"}
+{"label": "favorite songs", "name": "GOD.", "by": "Kendrick Lamar", "link": "https://open.spotify.com/track/5p3NP9mQblDsVJLdfNZJ3I", "image": "god.jpg", "category": "music"}
+
+
+{"label": "favorite songs", "name": "Sunday", "by": "The Cranberries", "link": "https://open.spotify.com/track/4zEvxRDaKDoFlHxK7Hy0wg?si=ef3f913be80c4100", "image": "sunday.jpg", "category": "music"}
+
+
+// More favorites
+{"label": "favorite superhero", "info": "Spider-Man"}
+{"label": "favorite shows", "info": "Sherlock"}
+{"label": "favorite shows", "info": "Stranger Things"}
+{"label": "favorite shows", "info": "Arrow"}
+{"label": "favorite shows", "info": "Loki"}
+{"label": "favorite shows", "info": "The Flash"}
+{"label": "favorite shows", "info": "Ted Lasso"}
+{"label": "favorite movies", "name": "Parasite", "by": "Bong Joon-ho"}
+{"label": "favorite movies", "name": "1917", "by": "Sam Mendes"}
+{"label": "favorite movies", "name": "Baby Driver", "by": "Edgar Wright"}
+{"label": "favorite movies", "name": "Knives Out", "by": "Rian Johnson"}
+{"label": "favorite movies", "name": "Uncut Gems", "by": "Josh Safdie, Benny Safdie"}
+{"label": "favorite movies", "name": "Spider-Man: No Way Home", "by": "Jon Watts"}
+{"label": "favorite movies", "name": "Your Name", "by": "Makoto Shinkai"}
+{"label": "favorite movies", "name": "Get Out", "by": "Jordan Peele"}
+{"label": "favorite movies", "name": "Star Wars: Episode III - Revenge of the Sith", "by": "George Lucas"}
+{"label": "favorite movies", "name": "The Batman", "by": "Matt Reeves"}
+{"label": "favorite movies", "name": "Ford v Ferrari", "by": "James Mangold"}
+{"label": "favorite movies", "name": "The Hobbit: The Desolation of Smaug", "by": "Peter Jackson"}
+{"label": "favorite books", "name": "The Hate U Give", "by": "Angie Thomas"}
+{"label": "favorite books", "name": "1984", "by": "George Orwell"}
+{"label": "favorite books", "name": "Bowerman and the Men of Oregon: The Story of Oregon's Legendary Coach and Nike's Cofounder", "by": "Kenny Moore"}
+{"label": "favorite books", "name": "Harry Potter and the Goblet of Fire", "by": "J.K. Rowling"}
+{"label": "favorite books", "name": "Slaughterhouse-Five", "by": "Kurt Vonnegut"}
+{"label": "favorite books", "name": "The Journeys of Socrates", "by": "Dan Millman"}
+{"label": "favorite cartoon", "info": "Tom and Jerry"}
+{"label": "favorite coffee", "info": "mocha"}
+{"label": "favorite drink", "info": "Jamba Juice Mango-A-Go-Go"}
+{"label": "favorite food", "info": "homemade pizza or har gow (蝦餃)"}
+{"label": "favorite ice cream flavor", "info": "mint chocolate chip"}
+{"label": "favorite fruit", "info": "mango"}
+{"label": "favorite vegetable", "info": "bok choy"}
+
+
+// Education
+{"label": "university", "info": "Georgia Institute of Technology", "category": "education", "tags": ["college", "school", "about", "academics", "georgia tech", "gt"]}
+{"label": "major", "info": "Computer Science", "category": "education", "tags": ["college", "concentration", "studying", "academics", "georgia tech", "gt", "georgia institute of technology"]}
+{"label": "degree", "info": "Bachelor of Science", "category": "education", "tags": ["college", "academics", "georgia tech", "gt", "georgia institute of technology"]}
+{"label": "GPA", "info": "4.0", "category": "education", "tags": ["academics", "college", "university", "georgia tech", "georgia institute of technology", "gt"]}
+{"label": "graduation date", "info": "May 2024", "category": "education", "tags": ["about", "college", "school", "year", "academics", "georgia tech", "georgia institute of technology", "gt"]}
+{"label": "threads", "info": "Info Internetworks, Intelligence", "category": "education", "tags": ["school", "college", "georgia tech", "georgia institute of technology", "academics", "gt"]}
+{"label": "high school", "info": "Southridge High School", "category": "education", "tags": ["school", "academics"]}
+
+{"label": "research", "name": "Georgia Tech Contextual Computing Group", "start date": "January 2023", "end date": "May 2024", "location": "Atlanta, GA", "position": "Undergraduate Research Assistant", "description": ["Worked in Dr. Thad Starner’s passive haptic learning lab to create gloves that accelerate piano skill acquisition.", "Created an analytical dashboard using Chart.js for users to track their progression over time via a web portal.", "Placed 3rd place for best poster presentation in the College of Computing at the 17th Annual Georgia Tech Undergraduate Research Symposium."], "category": "education", "tags": ["research", "work experience", "jobs", "thad starner"]}
+{"label": "interests", "info": "Highly interested in large-scale distributed data systems and databases, full-stack development, machine learning, and cloud computing.", "category": "education", "tags": ["company", "companies"]}
+{"label": "languages I know", "info": "Python, C/C++, JavaScript, HTML/CSS, Java, TypeScript, R", "category": "education", "tags": "about"}
+{"label": "tools I know", "info": "Git, React, Node.js, Docker, Valgrind, GDB, VMWare Workstation Player, Virtualbox, Bootstrap, Elasticsearch, Kibana", "category": "education", "tags": ["coding", "programming", "about"]}
+{"label": "resume", "info": "resume", "category": "education", "tags": ["about"]}
+{"label": "awards", "info": "Valedictorian, Mathematics Department Award, Dean's List, graduated with highest honors at GT, 3rd place best CoC poster presentation at the 17th Annual Georgia Tech Undergraduate Research Symposium.", "category": "education"}
+{"label": "leadership", "info": "Associated Student Body Leader (Student Government), Track and Field Team Captain, NHS", "category": "education"}
+{"label": "links", "info": "LinkedIn", "url": "http://www.linkedin.com/in/nathanaeng", "tags": "social media", "category": ["education", "contact"]}
+{"label": "links", "info": "GitHub", "url": "http://github.com/nathanaeng", "tags": "social media", "category": ["education", "contact"]}
+{"label": "email", "info": "nathaneng89@gmail.com", "category": "contact"}
+{"label": "phone", "info": "(503) 748-9216", "category": "contact"}
+
+
+// Projects
+{"label": "projects", "name": "sorting algorithm visualizer", "date": "January 2022", "description": "Created a website to visualize different sorting algorithms and their time complexities.", "tools used": "JavaScript, React, Bootstrap, HTML/CSS, Photoshop", "url": "https://nathanaeng.github.io/sorting-visualizer/", "category": "education"}
+{"label": "projects", "name": "typing test", "date": "December 2021", "description": "Created a website where you can see how fast you can type!", "tools used": "JavaScript, HTML/CSS", "url": "https://nathanaeng.github.io/typing-test/", "category": "education"}
+{"label": "projects", "name": "matrix inverter", "date": "November 2021", "description": "Implemented a matrix object in Python with basic operations such as inverses, transposition, and determinants.", "tools used": "Python", "url": "https://github.com/nathanaeng/matrix-inverter", "category": "education"}
+{"label": "projects", "name": "distributed time event server", "date": "May 2022", "description": "Developed a multi-threaded, encrypted networking system using the User Dacategoryram Protocol.", "tools used": "C, Pthreads library", "url": "", "category": "education"}
+{"label": "projects", "name": "Instagram follower tracker", "date": "August 2022", "description": "Created a script to track who unfollows you on Instagram as well as other statistics.", "tools used": "Python, Selenium", "url": "", "category": "education"}
+
+
+// Work experience
+{"label": "work experience", "name": "Nike, Inc.", "start date": "June 2023", "end date": "August 2023", "location": "Beaverton, OR", "position": "Software Engineer Intern", "description": ["Migrated Google Cloud Platform project provisioning to Nike’s central cloud provider management application, increasing scalability and reducing project configuration time by 40%.", "Implemented an asynchronous workflow to configure IAM policy bindings, service account permissions, and SSO integrations, enhancing security and streamlining access management.", "Engineered a testing framework with JavaScript and Python for Google Cloud Platform project creation, improving reliability and eliminating an error affecting 80% of prior projects.", "Orchestrated a complex multi-container application with Docker Compose, creating a consistent development environment and accelerating the development process."], "category": "jobs", "tags": "internships", "tags": ["company", "companies"]}
+{"label": "work experience", "name": "Streem, Inc.", "start date": "May 2022", "end date": "August 2022", "location": "Portland, OR", "position": "Software Engineer Intern", "description": ["Implemented end-to-end tests for a video call system using WebdriverIO framework", "Created a script to validate simultaneous localization and mapping algorithms and RealityKit scenes", "Designed and ran multi-platform tests in BrowserStack"], "category": "jobs", "tags": "internships", "tags": ["company", "companies"]}
+{"label": "work experience", "name": "DeFi Development Startup", "start date": "October 2021", "end date": "May 2022", "location": "Portland, OR", "position": "Full Stack Developer", "description": ["Built a decentralized peer-to-peer social network payment application using React, jQuery, and Bootstrap", "Deployed smart contracts on the Ethereum blockchain with Truffle and Web3.js", "Integrated third party hot wallets such as MetaMask and Coinbase Wallet", "Supervised beta software testing with 20 users"], "category": "jobs", "tags": ["company", "companies"]}
+{"label": "work experience", "name": "Oregon Health and Science University, Department of Medical Informatics and Clinical Epidemiology", "start date": "May 2021", "end date": "September 2021", "location": "Portland, OR", "position": "Data Science Intern", "description": ["Filtered data sets from the N3C COVID-19 database containing over 6 million rows with R, Python, and SQL", "Utilized SparkR for distributed data processing to deal with large-scale data streams", "Developed data visualization templates including a single-data frequency plot split among data partners", "Presented and demonstrated how data analysts can apply these templates to their research"], "category": "jobs", "tags": "internships", "tags": ["company", "companies"]}
+{"label": "work experience", "name": "University of Oregon Department of Computer Science", "start date": "January 2022", "end date": "June 2022", "location": "Eugene, OR", "position": "CS 315, Intermediate Algorithms: Teacher's Assistant", "description": ["Supported student learning objectives through personalized and small group assistance", "Graded students' work based on a list of quality standards"], "category": "jobs"}
+
+
+
+{"label": "tools used for this website", "info": "React, Docker, AWS Lambda, Elasticsearch, Kibana", "tags": "tech"}

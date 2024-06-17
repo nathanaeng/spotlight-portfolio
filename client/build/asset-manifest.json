@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9f0f7963.css",
+    "main.js": "/static/js/main.ccb273a7.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/static/js/787.c4e7f8f9.chunk.js",
+    "static/media/me.jpg": "/static/media/me.953d1590a4b1c53f7e26.jpg",
+    "static/media/Resume.pdf": "/static/media/Resume.f7bc8f10d65811414564.pdf",
+    "static/media/die_for_you.jpg": "/static/media/die_for_you.51cfe417a112f4a8a447.jpg",
+    "static/media/until_i_found_you.jpg": "/static/media/until_i_found_you.fe83c6b29d3f2bf2725e.jpg",
+    "static/media/heat_waves.jpg": "/static/media/heat_waves.4bc9224da9bbd31c937d.jpg",
+    "static/media/golden_hour.jpg": "/static/media/golden_hour.6dc264353a93cccae233.jpg",
+    "static/media/karma.jpg": "/static/media/karma.ec78dccaf894a894cdea.jpg",
+    "static/media/god.jpg": "/static/media/god.a5616010b62abbed8fe8.jpg",
+    "static/media/ojitos_lindos.jpg": "/static/media/ojitos_lindos.397bcec07e2b0cd331c5.jpg",
+    "static/media/die_hard.jpg": "/static/media/die_hard.3c4fde49d85179478901.jpg",
+    "static/media/mess_u_made.jpg": "/static/media/mess_u_made.2947695c7287d15dfbd5.jpg",
+    "static/media/nice_for_what.jpg": "/static/media/nice_for_what.987d3844a70f14a41f5e.jpg",
+    "static/media/a-punk.jpg": "/static/media/a-punk.c96f87c0f55813fd1042.jpg",
+    "static/media/GT.png": "/static/media/GT.5a82331141359ce29d8c.png",
+    "static/media/sweet_fa.jpg": "/static/media/sweet_fa.6dd580eac69938d199c4.jpg",
+    "static/media/third_eye.jpg": "/static/media/third_eye.a85a9601d6b183be4332.jpg",
+    "static/media/cruel_summer.jpg": "/static/media/cruel_summer.e59b4517ec219e4b99ce.jpg",
+    "static/media/team.jpg": "/static/media/team.5e4eb508da19d91dc614.jpg",
+    "index.html": "/index.html",
+    "main.9f0f7963.css.map": "/static/css/main.9f0f7963.css.map",
+    "main.ccb273a7.js.map": "/static/js/main.ccb273a7.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/static/js/787.c4e7f8f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9f0f7963.css",
+    "static/js/main.ccb273a7.js"
+  ]
+}

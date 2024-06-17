@@ -1,0 +1,221 @@
+.results-container {
+    max-height: 620px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: calc(var(--search-padding) * 1px);
+}
+
+.results-container:empty {
+    display: none;
+}
+
+.result-box {
+    position: relative;
+    border-radius: 0.4rem;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+/* .result-box:after {
+    content: "";
+    background: rgb(155, 155, 155);
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    height: 0.1px;
+    width: 100%;
+} */
+
+.dark-result-box {
+    background-color: rgba(236, 247, 253, 0.3) !important;
+}
+
+.result-box:not(:first-child) {
+    margin-top: calc(var(--search-padding) * 1px);
+}
+
+.result-box.resume:hover {
+    cursor: pointer;
+}
+
+.resume-download {
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+    color: gray !important;
+    max-width: 30px;
+    width: 5%;
+}
+
+.result-me {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 6px;
+    padding-top: 6px;
+}
+
+.result-text {
+    margin-top: 4px;
+    line-height: 30px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 20px;
+}
+
+.thumbnail, .thumbnail-gt, .thumbnail-song {
+    float: left;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.thumbnail-song {
+    margin-left: 0.5rem;
+    border-radius: 0.2rem;
+}
+
+.song-grid {
+    display: grid;
+    grid-template-columns: max-content auto;
+}
+
+.song-grid-right {
+    grid-column: 2;
+}
+
+.project-date {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 14px;
+}
+
+.project-info {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    word-wrap: break-word;
+    font-size: 18px;
+}
+
+.position {
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.work-location, .work-date {
+    margin-left: 1rem;
+    font-size: 14px;
+    margin-bottom: 0.5rem;
+    margin-right: 1rem;
+}
+
+.work-location-icon {
+    /* color: black; */
+    position: relative;
+    bottom: 2px;
+    margin-right: 3px;
+}
+
+.work-description {
+    margin-right: 1rem;
+    font-size: 18px;
+}
+
+.result-label {
+    position: relative;
+    margin-left: 1rem;
+    top: -0.2rem;
+    opacity: 0.75;
+    font-size: 16px;
+}
+
+.result-by {
+    margin-left: 1rem;
+    font-size: 18px;
+}
+
+.react-pdf__Page,
+.react-pdf__Page__canvas,
+.react-pdf__Page__textContent,
+.react-pdf__Page__annotations {
+    margin: 0 auto;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 0;
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: gray !important;
+    z-index: 1;
+    background: none;
+    border: none;
+    max-width: 35px;
+    width: 6%;
+}
+
+.modal {
+    overflow-x: hidden;
+}
+
+.modal-width {
+    max-width: 90%;
+    padding-left: -10px;
+}
+
+.music-clip {
+    border-radius: 12px;
+    width: 100%;
+    height: 80px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (max-width: 600px) {
+    .modal-width {
+        max-width: 100%;
+    }
+
+    .results-container {
+        max-height: 420px !important;
+        /* max-height: 70vh; */
+    }
+
+    .result-text, .position {
+        line-height: 20px;
+        font-size: 16px;
+    }
+
+    .result-by, .result-label {
+        font-size: 12px;
+    }
+
+    .thumbnail-gt {
+        margin-top: 0.6rem;
+    }
+
+    .thumbnail-song {
+        width: 90px;
+    }
+
+    .project-info, .work-description {
+        font-size: 14px;
+    }
+
+    .resume-download {
+        left: 10px;
+        bottom: 10px;
+    }
+
+    .work-location, .work-date, .project-date {
+        font-size: 12px;
+    }
+
+    .position {
+        font-size: 14px;
+    }
+}
