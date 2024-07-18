@@ -1,50 +1,52 @@
 import { useEffect, useState, useCallback } from 'react';
-import '../styles/Searchbar.css';
 import { FiSearch } from 'react-icons/fi';
 import SearchCancel from './SearchCancel.jsx';
+import searchbarStyles from './Searchbar.module.css';
+import styles from '../results/Results.module.css';
+import darkStyles from '../dark-mode/DarkModeToggle.module.css';
 
 const Searchbar = ({ fetchData, clearResults }) => {
-    const [query, setQuery] = useState("");
+    const [query, setQuery] = useState('');
     const [debouncedQuery, setDebouncedQuery] = useState(query);
 
     // When search icon clicked
     const selectSearch = () => {
-        document.querySelector('.search-input').focus();
+        document.querySelector(`.${searchbarStyles['search-input']}`).focus();
     }
 
     // Clear query and results
     const clear = useCallback(() => {
-        document.querySelector(".search-input").value = "";
-        setDebouncedQuery("");
+        document.querySelector(`.${searchbarStyles['search-input']}`).value = '';
+        setDebouncedQuery('');
         clearResults();
     }, [clearResults]);
 
     useEffect(() => {
-        const input = document.querySelector(".search-input");
-        const content = document.querySelector(".content-box");
-        const container = document.querySelector(".title-container");
-        const dm = document.querySelector(".darkmode-toggle-btn");
+        const input = document.querySelector(`.${searchbarStyles['search-input']}`);
+        const content = document.querySelector('.content-box');
+        const container = document.querySelector('.title-container');
+        const dm = document.querySelector(`.${darkStyles['darkmode-toggle-btn']}`);
 
         const toggleFocus = e => {
-            const resumeModal = document.querySelector(".modal.resume");
+            const resumeModal = document.querySelector('.modal.resume');
     
             if (input === document.activeElement) {
-                content.classList.add("expand");
-                container.classList.add("blur");
-                dm.classList.add("blur");
+                content.classList.add('expand');
+                container.classList.add('blur');
+                dm.classList.add('blur');
             } else if (!content.contains(e.target) && !dm.contains(e.target) && !resumeModal.contains(e.target)) {
-                content.classList.remove("expand");
-                container.classList.remove("blur");
-                dm.classList.remove("blur");
+                content.classList.remove('expand');
+                container.classList.remove('blur');
+                dm.classList.remove('blur');
                 clear();
             }
         }
 
         const escapeKeyFocus = e => {
-            if ((e.key === "Escape" || e.key === "Esc") && input.value === "") {
-                content.classList.remove("expand");
-                container.classList.remove("blur");
-                dm.classList.remove("blur");
+            if ((e.key === 'Escape' || e.key === 'Esc') && input.value === '') {
+                content.classList.remove('expand');
+                container.classList.remove('blur');
+                dm.classList.remove('blur');
                 clear();
                 input.blur();
             }
@@ -59,6 +61,7 @@ const Searchbar = ({ fetchData, clearResults }) => {
         }
     }, [clear]);
 
+    // Toggle placeholder values
     useEffect(() => {
         const toggle = (...values) => {
             let index = 0;
@@ -72,20 +75,21 @@ const Searchbar = ({ fetchData, clearResults }) => {
             };
         }
     
-        const togglePlaceholder = toggle("e.g. work experience", "e.g. hobbies", "e.g. about",
-                "e.g. favorite movies", "e.g. interests", "e.g. education", "e.g. pets",
-                "e.g. resume", "e.g. home town", "e.g. languages I know", "e.g. projects",
-                "e.g. LinkedIn");
+        const togglePlaceholder = toggle('e.g. work experience', 'e.g. hobbies', 'e.g. about',
+                'e.g. favorite movies', 'e.g. interests', 'e.g. education', 'e.g. pets',
+                'e.g. resume', 'e.g. home town', 'e.g. languages I know', 'e.g. projects',
+                'e.g. LinkedIn');
 
         const interval = setInterval(() => {
-            document.querySelector('.search-input').placeholder = togglePlaceholder();
+            document.querySelector(`.${searchbarStyles['search-input']}`).placeholder = togglePlaceholder();
         }, 2000);
         
         return () => clearInterval(interval);
     }, []);
 
+    // Querying
     useEffect(() => {
-        if (query !== "") {
+        if (query !== '') {
             fetchData(query);
         } else {
             clearResults();
@@ -99,7 +103,7 @@ const Searchbar = ({ fetchData, clearResults }) => {
 
     // Mobile: hide keyboard after touch event
     useEffect(() => {
-        const results = document.querySelector('.results-container');
+        const results = document.querySelector(`.${styles['results-container']}`);
         const hideKeyboard = () => {
             document.activeElement.blur();
         }
@@ -109,12 +113,12 @@ const Searchbar = ({ fetchData, clearResults }) => {
     }, []);
 
     return (
-        <div className="searchbar">
-            <button className="search-icon" onClick={ selectSearch }><FiSearch size={20} /></button>
-            <input className="search-input" type="search" placeholder="e.g. work experience" onChange={e => setDebouncedQuery(e.target.value)} maxLength="50" />
+        <div className={searchbarStyles.searchbar}>
+            <button className={searchbarStyles["search-icon"]} onClick={ selectSearch }><FiSearch size={20} /></button>
+            <input className={searchbarStyles["search-input"]} type="search" placeholder="e.g. work experience" onChange={e => setDebouncedQuery(e.target.value)} maxLength="50" />
             <SearchCancel query={debouncedQuery} clear={clear}/>
         </div>
     );
 }
 
-export default Searchbar
+export default Searchbar;

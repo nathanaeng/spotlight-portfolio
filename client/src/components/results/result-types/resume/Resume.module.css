@@ -1,0 +1,40 @@
+.resume-download {
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+    color: gray !important;
+    max-width: 30px;
+    width: 5%;
+}
+
+:global(.result-box).resume:hover {
+    cursor: pointer;
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: gray !important;
+    z-index: 1;
+    background: none;
+    border: none;
+    max-width: 35px;
+    width: 6%;
+}
+
+.modal-width {
+    max-width: 90%;
+    padding-left: -10px;
+}
+
+@media (max-width: 600px) {
+    .modal-width {
+        max-width: 100%;
+    }
+    
+    .resume-download {
+        left: 10px;
+        bottom: 10px;
+    }
+}

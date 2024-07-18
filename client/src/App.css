@@ -5,6 +5,39 @@
   --scale: calc((var(--new-width) - (var(--search-padding) * 0.5)) / var(--new-width));
 }
 
+body {
+  /* Colors */
+  --bg-color: #FFF;
+  --text-color: rgb(56, 56, 56);;
+  --secondary-text-color: rgb(97, 97, 97);
+  --placeholder-color: rgb(97, 97, 97);
+  --content-box-bg: rgba(100, 100, 100, 0.2);
+  --content-box-shadow-color: rgba(122, 122, 122, 0.2);
+  --result-box-color: rgba(255, 255, 255, 0.4);
+  --searchbar-bg-color: rgba(255, 255, 255, 0.4);
+  --search-icon-color: rgb(29, 130, 225);
+  --search-input-color: black;
+  --search-cancel-color: black;
+  --title-color: -webkit-linear-gradient(rgb(246, 177, 49), rgb(62, 156, 255));
+
+  background-color: var(--bg-color);
+}
+
+body.dark {
+  --bg-color: rgb(18, 18, 18);
+  --text-color: #FFF;
+  --secondary-text-color: #FFF;
+  --placeholder-color: #FFF;
+  --content-box-bg: rgba(75, 75, 75, 0.5);
+  --content-box-shadow-color: rgba(73, 73, 73, 0.2);
+  --result-box-color: rgba(236, 247, 253, 0.1);
+  --searchbar-bg-color: rgba(236, 247, 253, 0.1);
+  --search-icon-color: #FFF;
+  --search-input-color: #FFF;
+  --search-cancel-color: #FFF;
+  --title-color: -webkit-linear-gradient(rgb(62, 156, 255), rgb(246, 177, 49));
+}
+
 .all {
   display: flex;
   align-items: center;
@@ -24,10 +57,10 @@ of the window is small (looks better) */
 .content-box {
   position: relative;
   top: 50px;
-  background-color: rgba(100, 100, 100, 0.2);
+  background-color: var(--content-box-bg);
   padding: calc(var(--search-padding) * 1px);
   border-radius: 0.3rem;
-  box-shadow: 0px 0px 5px 1px rgba(122, 122, 122, 0.2);
+  box-shadow: 0px 0px 5px 1px var(--content-box-shadow-color);
   width: 90%;
   max-width: calc(var(--content-width) * 1px);
   transition: scale 0.5s ease, transform 0.5s ease;
@@ -35,32 +68,11 @@ of the window is small (looks better) */
   scale: 0.5 0.75;
 }
 
-.search-icon,
-::placeholder {
-  /* transform-origin: -5%; */
-  transform-origin: left;
-  scale: 1.5 1;
-}
-
-.content-box > .searchbar {
-  scale: calc(var(--scale)) 1;
-}
-
 .expand {
   scale: 1;
   transition: scale 0.5s ease, transform 0.5s ease;
   transform-origin: top;
   transform: translateY(-170px);
-}
-
-.expand > .searchbar > .search-icon,
-.expand > .searchbar > ::placeholder {
-  transform-origin: left;
-  scale: 1;
-}
-
-.expand > .searchbar {
-  scale: 1;
 }
 
 @media (min-width: 600px) {
@@ -84,48 +96,11 @@ of the window is small (looks better) */
 .title {
   font-size: 70px;
   margin-top: min(20%, 5rem);
-  background: -webkit-linear-gradient(rgb(246, 177, 49), rgb(62, 156, 255));
+  background: var(--title-color);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
-}
-
-.about {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  /* display: inline-block; */
-  margin-top: 1rem;
-  color: rgb(56, 56, 56);
-  opacity: 0;
-  font-size: 20px;
-  width: min(50%, 450px);
-  /* width: fit-content; */
-  text-align: center;
-  flex: 1;
-}
-
-#about-icon {
-  /* position: relative; */
-  background-color: transparent;
-  border: none;
-  bottom: 1px;
-  color: rgb(56, 56, 56);
-  padding: 0px;
-  cursor: default;
-}
-
-#about-more {
-  /* not the best */
-  width: min(100%, 400px);
-  font-size: 16px;
-  color: rgb(97, 97, 97);
-}
-
-#email-me {
-  color: #0D6EFD;
-  cursor: pointer;
 }
 
 .title-container {
@@ -142,6 +117,21 @@ of the window is small (looks better) */
   transition: opacity 1s, filter 0.5s ease;
 }
 
+/* Issues with Bootstrap if in Resume.module.css */
+.modal {
+  overflow-x: hidden;
+}
+
+.react-pdf__Page,
+.react-pdf__Page__canvas,
+.react-pdf__Page__textContent,
+.react-pdf__Page__annotations {
+    margin: 0 auto;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 0;
+}
+
 @media (max-width: 600px) {
   .all {
     margin-bottom: 4rem;
@@ -154,15 +144,6 @@ of the window is small (looks better) */
     margin-bottom: 3rem;
   }
 
-  .content-box > .searchbar > .search-icon,
-  .content-box > .searchbar > input {
-    scale: 1
-  }
-
-  .content-box > .searchbar {
-    scale: 1;
-  }
-
   .expand {
     transform: translateY(0px) !important;
   }
@@ -170,21 +151,5 @@ of the window is small (looks better) */
   .title {
     font-size: 50px;
     margin-top: 4rem;
-  }
-
-  .about {
-    font-size: 14px;
-    width: 80%;
-    /* margin-left: 1rem; */
-    /* margin-right: 1rem; */
-  }
-
-  #about-more {
-    width: 100%;
-    font-size: 12px;
-  }
-  
-  ::placeholder {
-    scale: 1;
   }
 }

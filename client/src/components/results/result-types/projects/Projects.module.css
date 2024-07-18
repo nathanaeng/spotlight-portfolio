@@ -1,0 +1,24 @@
+.project-date {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+.project-info {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    word-wrap: break-word;
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+@media (max-width: 600px) {
+    .project-info {
+        font-size: 14px;
+    }
+
+    .project-date {
+        font-size: 12px;
+    }
+}

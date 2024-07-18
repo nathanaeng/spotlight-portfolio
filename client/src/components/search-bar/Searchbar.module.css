@@ -7,7 +7,11 @@
     border-radius: 0.3rem;
     padding-top: 8px;
     padding-bottom: 8px;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: var(--searchbar-bg-color);
+}
+
+:global(.content-box) > .searchbar {
+    scale: calc(var(--scale)) 1;
 }
 
 .search-icon {
@@ -15,8 +19,24 @@
     bottom: 2px;
     background-color: transparent;
     border: none;
-    color: rgb(29, 130, 225);
+    color: var(--search-icon-color);
     transition: scale 0.5s ease;
+}
+
+.search-icon,
+::placeholder {
+  transform-origin: left;
+  scale: 1.5 1;
+}
+
+:global(.expand) > .searchbar > .search-icon,
+:global(.expand) > .searchbar > ::placeholder {
+  transform-origin: left;
+  scale: 1;
+}
+
+:global(.expand) > .searchbar {
+  scale: 1;
 }
 
 .search-input {
@@ -31,9 +51,10 @@
     max-width: 100%;
     background-color: transparent;
     font-family: 'Inter', sans-serif;
+    color: var(--search-input-color);
 }
 
-.expand > .searchbar > .search-input {
+:global(.expand) > .searchbar > .search-input {
     margin-left: 0px;
 }
 
@@ -41,48 +62,35 @@ input[type="search"]::-webkit-search-cancel-button {
     display: none;
 }
 
-.search-cancel {
-    margin-right: 0.25rem;
-}
-
-.search-cancel {
-    background: none;
-    border: none;
-    color: black;
-    z-index: 3;
-    display: none;
-}
-
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: rgb(97, 97, 97);
+    color: var(--placeholder-color);
     opacity: 1; /* Firefox */
     transition: scale 0.5s ease;
 }
   
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: rgb(97, 97, 97);
+    color: var(--placeholder-color);
 }
   
 ::-ms-input-placeholder { /* Microsoft Edge */
-    color: rgb(97, 97, 97);
-}
-
-/* Dark Mode */
-.dark.search-input::placeholder {
-    color: white;
-    opacity: 1;
-}
-  
-.dark.search-input:-ms-input-placeholder {
-    color: white;
-}
-  
-.dark.search-input::-ms-input-placeholder {
-    color: white;
+    color: var(--placeholder-color);
 }
 
 @media (max-width: 600px) {
     .search-input {
         font-size: 18px;
+    }
+
+    :global(.content-box) > .searchbar > .search-icon,
+    :global(.content-box) > .searchbar > input {
+      scale: 1
+    }
+
+    :global(.content-box) > .searchbar {
+        scale: 1;
+    }
+
+    ::placeholder {
+        scale: 1;
     }
 }

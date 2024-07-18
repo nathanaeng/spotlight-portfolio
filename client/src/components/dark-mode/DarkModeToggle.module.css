@@ -1,0 +1,25 @@
+.darkmode-toggle-btn {
+    opacity: 0;
+    background: none;
+    border: none;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 1;
+    /* cursor: default; */
+}
+
+.darkmode-svg {
+    pointer-events: none;
+}
+
+/* .dark.search-input {
+    transition: all 0s;
+} */
+
+@media (max-width: 600px) {
+    .darkmode-svg {
+        width: 24px;
+        height: 24px;
+    }
+}

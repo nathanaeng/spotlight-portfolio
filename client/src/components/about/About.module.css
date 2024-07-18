@@ -1,0 +1,46 @@
+.about {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1rem;
+    color: var(--text-color);
+    opacity: 0;
+    font-size: 20px;
+    width: min(50%, 450px);
+    text-align: center;
+    flex: 1;
+}
+
+#about-icon {
+    /* position: relative; */
+    background-color: transparent;
+    border: none;
+    bottom: 1px;
+    color: var(--text-color);
+    padding: 0px;
+    cursor: default;
+}
+  
+#about-more {
+    width: min(100%, 400px);
+    font-size: 16px;
+    color: var(--secondary-text-color);
+}
+
+#email-me {
+  color: #0D6EFD;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .about {
+        font-size: 14px;
+        width: 80%;
+    }
+    
+    #about-more {
+        width: 100%;
+        font-size: 12px;
+    }
+      
+}

@@ -1,0 +1,43 @@
+.position {
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 16px;
+    font-style: italic;
+    color: var(--text-color);
+}
+
+.work-location, .work-date {
+    margin-left: 1rem;
+    font-size: 14px;
+    margin-bottom: 0.5rem;
+    margin-right: 1rem;
+    color: var(--text-color);
+}
+
+.work-location-icon {
+    /* color: black; */
+    position: relative;
+    bottom: 2px;
+    margin-right: 3px;
+    color: var(--text-color);
+}
+
+.work-description {
+    margin-right: 1rem;
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+@media (max-width: 600px) {
+    .position {
+        font-size: 14px;
+    }
+    
+    .work-description {
+        font-size: 14px;
+    }
+
+    .work-location, .work-date {
+        font-size: 12px;
+    }
+}

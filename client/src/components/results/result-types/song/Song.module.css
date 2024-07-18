@@ -1,0 +1,21 @@
+.thumbnail-song {
+    margin-left: 0.5rem;
+    margin-right: 1rem;
+    border-radius: 0.2rem;
+    float: left;
+}
+
+.song-grid {
+    display: grid;
+    grid-template-columns: max-content auto;
+}
+
+.song-grid-right {
+    grid-column: 2;
+}
+
+@media (max-width: 600px) {
+    .thumbnail-song {
+        width: 90px;
+    }
+}
