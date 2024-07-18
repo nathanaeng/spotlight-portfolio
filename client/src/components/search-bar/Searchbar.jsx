@@ -7,7 +7,6 @@ import darkStyles from '../dark-mode/DarkModeToggle.module.css';
 
 const Searchbar = ({ fetchData, clearResults }) => {
     const [query, setQuery] = useState('');
-    const [debouncedQuery, setDebouncedQuery] = useState(query);
 
     // When search icon clicked
     const selectSearch = () => {
@@ -17,7 +16,7 @@ const Searchbar = ({ fetchData, clearResults }) => {
     // Clear query and results
     const clear = useCallback(() => {
         document.querySelector(`.${searchbarStyles['search-input']}`).value = '';
-        setDebouncedQuery('');
+        setQuery('');
         clearResults();
     }, [clearResults]);
 
@@ -96,11 +95,6 @@ const Searchbar = ({ fetchData, clearResults }) => {
         }
     }, [query, fetchData, clearResults]);
 
-    useEffect(() => {
-        const timeout = setTimeout(() => setQuery(debouncedQuery), 0);
-        return () => clearTimeout(timeout);
-    }, [debouncedQuery]);
-
     // Mobile: hide keyboard after touch event
     useEffect(() => {
         const results = document.querySelector(`.${styles['results-container']}`);
@@ -115,8 +109,8 @@ const Searchbar = ({ fetchData, clearResults }) => {
     return (
         <div className={searchbarStyles.searchbar}>
             <button className={searchbarStyles["search-icon"]} onClick={ selectSearch }><FiSearch size={20} /></button>
-            <input className={searchbarStyles["search-input"]} type="search" placeholder="e.g. work experience" onChange={e => setDebouncedQuery(e.target.value)} maxLength="50" />
-            <SearchCancel query={debouncedQuery} clear={clear}/>
+            <input className={searchbarStyles["search-input"]} type="search" placeholder="e.g. work experience" onChange={e => setQuery(e.target.value)} maxLength="50" />
+            <SearchCancel query={query} clear={clear}/>
         </div>
     );
 }
