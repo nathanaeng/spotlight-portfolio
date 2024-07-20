@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback } from 'react';
+import { useRef, useEffect, useState, useCallback } from 'react';
 import { FiSearch } from 'react-icons/fi';
 import SearchCancel from './SearchCancel.jsx';
 import searchbarStyles from './Searchbar.module.css';
@@ -7,21 +7,22 @@ import darkStyles from '../dark-mode/DarkModeToggle.module.css';
 
 const Searchbar = ({ fetchData, clearResults }) => {
     const [query, setQuery] = useState('');
-
+    const inputRef = useRef(null);
+    
     // When search icon clicked
     const selectSearch = () => {
-        document.querySelector(`.${searchbarStyles['search-input']}`).focus();
+        inputRef.current.focus();
     }
 
     // Clear query and results
     const clear = useCallback(() => {
-        document.querySelector(`.${searchbarStyles['search-input']}`).value = '';
+        inputRef.current.value = '';
         setQuery('');
         clearResults();
     }, [clearResults]);
 
     useEffect(() => {
-        const input = document.querySelector(`.${searchbarStyles['search-input']}`);
+        const input = inputRef.current;
         const content = document.querySelector('.content-box');
         const container = document.querySelector('.title-container');
         const dm = document.querySelector(`.${darkStyles['darkmode-toggle-btn']}`);
@@ -80,20 +81,30 @@ const Searchbar = ({ fetchData, clearResults }) => {
                 'e.g. LinkedIn');
 
         const interval = setInterval(() => {
-            document.querySelector(`.${searchbarStyles['search-input']}`).placeholder = togglePlaceholder();
+            inputRef.current.placeholder = togglePlaceholder();
         }, 2000);
         
         return () => clearInterval(interval);
     }, []);
 
     // Querying
-    useEffect(() => {
-        if (query !== '') {
-            fetchData(query);
+    // useEffect(() => {
+    //     if (query !== '') {
+    //         fetchData(query);
+    //     } else {
+    //         clearResults();
+    //     }
+    // }, [query, fetchData, clearResults]);
+
+    const handleInputChange = e => {
+        const newQuery = e.target.value;
+        setQuery(newQuery);
+        if (newQuery !== '') {
+            fetchData(newQuery);
         } else {
             clearResults();
         }
-    }, [query, fetchData, clearResults]);
+    }
 
     // Mobile: hide keyboard after touch event
     useEffect(() => {
@@ -101,15 +112,15 @@ const Searchbar = ({ fetchData, clearResults }) => {
         const hideKeyboard = () => {
             document.activeElement.blur();
         }
-        results.addEventListener('touchstart', hideKeyboard);
+        results.addEventListener('touchstart', hideKeyboard, { passive: true });
 
         return () => results.removeEventListener('touchstart', hideKeyboard);
     }, []);
 
     return (
         <div className={searchbarStyles.searchbar}>
-            <button className={searchbarStyles["search-icon"]} onClick={ selectSearch }><FiSearch size={20} /></button>
-            <input className={searchbarStyles["search-input"]} type="search" placeholder="e.g. work experience" onChange={e => setQuery(e.target.value)} maxLength="50" />
+            <button className={searchbarStyles["search-icon"]} onClick={ selectSearch }><FiSearch size={24} /></button>
+            <input ref={inputRef} className={searchbarStyles["search-input"]} type="search" placeholder="e.g. work experience" onChange={handleInputChange} maxLength="50" />
             <SearchCancel query={query} clear={clear}/>
         </div>
     );

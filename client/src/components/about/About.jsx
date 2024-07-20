@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import { AiOutlineInfoCircle } from 'react-icons/ai';
 import styles from './About.module.css';
 import searchbarStyles from '../search-bar/Searchbar.module.css';
@@ -11,20 +11,23 @@ const About = ({ fetchData }) => {
     fetchData("email");
   }
 
+  const aboutRef = useRef(null);
+  const iconRef = useRef(null);
+
   useEffect(() => {
     // Fade-in effect on load
     setTimeout(() => {
-      document.querySelector(`.${styles['about']}`).classList.add('fade-in');
-      document.querySelector(`#${styles['about-icon']}`).setAttribute('data-bs-target', `#${styles['about-more']}`);
-      document.querySelector(`#${styles['about-icon']}`).style.cursor = 'pointer';
+      aboutRef.current.classList.add('fade-in');
+      iconRef.current.setAttribute('data-bs-target', `#${styles['about-more']}`);
+      iconRef.current.style.cursor = 'pointer';
     }, 1000);
   }, []);
 
   return (
-    <div className={styles["about"]}>
+    <div ref={aboutRef} className={styles["about"]}>
         <span id={styles["about"]}>
           {"Type something to learn more about me "}
-          <button id={styles["about-icon"]} data-bs-toggle="collapse">
+          <button ref={iconRef} id={styles["about-icon"]} data-bs-toggle="collapse">
             <AiOutlineInfoCircle />
           </button>
         </span>

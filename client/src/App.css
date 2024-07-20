@@ -100,7 +100,9 @@ of the window is small (looks better) */
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  height: 100%;
   opacity: 0;
+  padding-bottom: 5px;
 }
 
 .title-container {
