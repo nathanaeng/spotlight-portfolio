@@ -38,7 +38,7 @@
 
 @media (max-width: 600px) {
     .modal-width {
-        max-width: 100%;
+        max-width: 100% !important;
     }
     
     .resume-download {

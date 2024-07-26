@@ -60,7 +60,7 @@ of the window is small (looks better) */
   background-color: var(--content-box-bg);
   padding: calc(var(--search-padding) * 1px);
   border-radius: 0.3rem;
-  box-shadow: 0px 0px 5px 1px var(--content-box-shadow-color);
+  box-shadow: 0px 0px 10px 2px var(--content-box-shadow-color);
   width: 90%;
   max-width: calc(var(--content-width) * 1px);
   transition: scale 0.5s ease, transform 0.5s ease;
@@ -118,6 +118,11 @@ of the window is small (looks better) */
   overflow-x: hidden;
 }
 
+.modal-body {
+  margin: 0 !important;
+  padding: 7px !important;
+}
+
 .react-pdf__Page,
 .react-pdf__Page__canvas,
 .react-pdf__Page__textContent,
@@ -126,6 +131,13 @@ of the window is small (looks better) */
     width: 100% !important;
     height: 100% !important;
     z-index: 0;
+}
+
+@media (max-width: 800px) {
+  .modal-body {
+    margin: 0 !important;
+    padding: 10px !important;
+  }
 }
 
 @media (max-width: 600px) {
@@ -148,4 +160,8 @@ of the window is small (looks better) */
     font-size: 50px;
     margin-top: 4rem;
   }
+
+  .modal-body {
+    padding: 7px !important;
+  }  
 }

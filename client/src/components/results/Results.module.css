@@ -17,6 +17,10 @@
     padding-bottom: 8px;
 }
 
+.result-box.resume {
+    cursor: pointer;
+}
+
 /* .result-box:after {
     content: "";
     background: rgb(155, 155, 155);
