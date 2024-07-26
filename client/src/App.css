@@ -77,14 +77,8 @@ of the window is small (looks better) */
 
 @media (min-width: 600px) {
   .title-container:has(.show) + .content .expand {
-      transform: translateY(-314px) !important;
+    transform: translateY(-314px) !important;
   }
-
-  /* .blur {
-      filter: blur(12px);
-      pointer-events: none;
-      user-select: none;
-  } */
 }
 
 .blur {

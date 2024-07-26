@@ -1,5 +1,5 @@
 import { Document, Page } from 'react-pdf';
-import resume from '../../../../documents/Resume.pdf';
+import resume from '/public/documents/Resume.pdf';
 import { pdfjs } from 'react-pdf';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
@@ -10,10 +10,10 @@ const Resume = ({ scale }) => {
   return (
     <div className="resume" data-bs-toggle="modal" data-bs-target="#resumeModal">
       <Document file={resume}>
-          <Page pageNumber={1} scale={scale}/>
+          <Page pageNumber={1} scale={scale} />
       </Document>
     </div>
   );
-}
+};
 
 export default Resume;

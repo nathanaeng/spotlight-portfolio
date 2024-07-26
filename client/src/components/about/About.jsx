@@ -8,8 +8,8 @@ const About = ({ fetchData }) => {
     const input = document.querySelector(`.${searchbarStyles['search-input']}`);
     input.focus();
     input.value = 'email';
-    fetchData("email");
-  }
+    fetchData('email');
+  };
 
   const aboutRef = useRef(null);
   const iconRef = useRef(null);
@@ -24,22 +24,22 @@ const About = ({ fetchData }) => {
   }, []);
 
   return (
-    <div ref={aboutRef} className={styles["about"]}>
-        <span id={styles["about"]}>
-          {"Type something to learn more about me "}
-          <button ref={iconRef} id={styles["about-icon"]} data-bs-toggle="collapse">
+    <div ref={aboutRef} className={styles['about']}>
+        <span id={styles['about']}>
+          {'Type something to learn more about me '}
+          <button ref={iconRef} id={styles['about-icon']} data-bs-toggle="collapse">
             <AiOutlineInfoCircle />
           </button>
         </span>
-        <div id={styles["about-more"]} className="collapse">
-          <br/>
+        <div id={styles['about-more']} className="collapse">
+          <br />
           This isn't your typical portfolio. Search anything you want to know about me. Well, almost anything.
-          <br/>
-          <br/>
-          Think I'm missing something? <span id={styles["email-me"]} onClick={clickEmail}>Email me!</span>
+          <br />
+          <br />
+          Think I'm missing something? <span id={styles['email-me']} onClick={clickEmail}>Email me!</span>
         </div>
     </div>
   );
-}
+};
 
 export default About;

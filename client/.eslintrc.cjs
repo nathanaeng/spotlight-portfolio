@@ -19,5 +19,10 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
+    'quotes': ['error', 'single'],
+    'jsx-quotes': ['error', 'prefer-double'],
+    'semi': ['error', 'always'],
+    'react/jsx-pascal-case': [2],
+    'react/jsx-tag-spacing': ['error', {'beforeSelfClosing': 'always'}],
   },
 }

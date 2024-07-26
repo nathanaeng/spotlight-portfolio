@@ -12,7 +12,7 @@ const Searchbar = ({ fetchData, clearResults }) => {
     // When search icon clicked
     const selectSearch = () => {
         inputRef.current.focus();
-    }
+    };
 
     // Clear query and results
     const clear = useCallback(() => {
@@ -40,7 +40,7 @@ const Searchbar = ({ fetchData, clearResults }) => {
                 dm.classList.remove('blur');
                 clear();
             }
-        }
+        };
 
         const escapeKeyFocus = e => {
             if ((e.key === 'Escape' || e.key === 'Esc') && input.value === '') {
@@ -50,7 +50,7 @@ const Searchbar = ({ fetchData, clearResults }) => {
                 clear();
                 input.blur();
             }
-        }
+        };
 
         document.addEventListener('click', e => toggleFocus(e));
         input.addEventListener('keydown', e => escapeKeyFocus(e));
@@ -58,7 +58,7 @@ const Searchbar = ({ fetchData, clearResults }) => {
         return () => {
             document.removeEventListener('click', toggleFocus);
             input.removeEventListener('keydown', escapeKeyFocus);
-        }
+        };
     }, [clear]);
 
     // Toggle placeholder values
@@ -73,7 +73,7 @@ const Searchbar = ({ fetchData, clearResults }) => {
                 }
                 return values[index];
             };
-        }
+        };
     
         const togglePlaceholder = toggle('e.g. work experience', 'e.g. hobbies', 'e.g. about',
                 'e.g. favorite movies', 'e.g. interests', 'e.g. education', 'e.g. pets',
@@ -87,15 +87,6 @@ const Searchbar = ({ fetchData, clearResults }) => {
         return () => clearInterval(interval);
     }, []);
 
-    // Querying
-    // useEffect(() => {
-    //     if (query !== '') {
-    //         fetchData(query);
-    //     } else {
-    //         clearResults();
-    //     }
-    // }, [query, fetchData, clearResults]);
-
     const handleInputChange = e => {
         const newQuery = e.target.value;
         setQuery(newQuery);
@@ -104,14 +95,14 @@ const Searchbar = ({ fetchData, clearResults }) => {
         } else {
             clearResults();
         }
-    }
+    };
 
     // Mobile: hide keyboard after touch event
     useEffect(() => {
         const results = document.querySelector(`.${styles['results-container']}`);
         const hideKeyboard = () => {
             document.activeElement.blur();
-        }
+        };
         results.addEventListener('touchstart', hideKeyboard, { passive: true });
 
         return () => results.removeEventListener('touchstart', hideKeyboard);
@@ -119,11 +110,13 @@ const Searchbar = ({ fetchData, clearResults }) => {
 
     return (
         <div className={searchbarStyles.searchbar}>
-            <button className={searchbarStyles["search-icon"]} onClick={ selectSearch }><FiSearch size={24} /></button>
-            <input ref={inputRef} className={searchbarStyles["search-input"]} type="search" placeholder="e.g. work experience" onChange={handleInputChange} maxLength="50" />
-            <SearchCancel query={query} clear={clear}/>
+            <button className={searchbarStyles['search-icon']} onClick={selectSearch}>
+                <FiSearch size={24} />
+            </button>
+            <input ref={inputRef} className={searchbarStyles['search-input']} type="search" placeholder="e.g. work experience" onChange={handleInputChange} maxLength="50" />
+            <SearchCancel query={query} clear={clear} />
         </div>
     );
-}
+};
 
 export default Searchbar;

@@ -28,15 +28,15 @@ const DarkModeToggle = () => {
 
         return () => {
             button.removeEventListener('click', toggleDarkMode);
-        }
+        };
     }, [darkMode, setDarkMode]);
 
     return (
-        <button ref={buttonRef} className={styles["darkmode-toggle-btn"]} style={{cursor: "default"}}>
-            {darkMode ? <IoIosSunny className={styles["darkmode-svg"]} size={32} color="white"/>
-                    : <BiMoon className={styles["darkmode-svg"]} size={30} color="rgb(97, 97, 97)"/>}
+        <button ref={buttonRef} className={styles['darkmode-toggle-btn']} style={{cursor: 'default'}}>
+            { darkMode ? <IoIosSunny className={styles['darkmode-svg']} size={32} color="white" />
+                    : <BiMoon className={styles['darkmode-svg']} size={30} color="rgb(97, 97, 97)" /> }
         </button>
     );
-}
+};
 
 export default DarkModeToggle;

@@ -30,6 +30,6 @@ const Result = ({ data }) => {
         default:
             return <Default data={data} />;
     }
-}
+};
 
 export default Result;

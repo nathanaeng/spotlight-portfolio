@@ -37,7 +37,7 @@ function App() {
     fetch('https://99khxxmb8j.execute-api.us-east-2.amazonaws.com/opensearch-api-1?q=!');
 
     // Fade-in effect on load
-    setTimeout(() => {document.querySelector('.title').classList.add('fade-in')}, 100);
+    setTimeout(() => {document.querySelector('.title').classList.add('fade-in');}, 100);
   }, []);
 
   return (
@@ -45,11 +45,11 @@ function App() {
       <DarkModeToggle />
       <div className="title-container">
         <h1 className="title">Nathan Eng</h1>
-        <About fetchData={fetchData}/>
+        <About fetchData={fetchData} />
       </div>
       <div className="content">
         <div className="content-box">
-          <Searchbar fetchData={fetchData} clearResults={clearResults}/>
+          <Searchbar fetchData={fetchData} clearResults={clearResults} />
           <Results data={data} />
         </div>
         <ResumeModal />

@@ -5,7 +5,7 @@ export function useColorScheme() {
     const getDarkMode = () => {
         let ls = JSON.parse(localStorage.getItem('darkmode'));
         return ls !== null ? ls : false;
-    }
+    };
 
     const [darkMode, setDarkMode] = useState(getDarkMode());
 
@@ -26,5 +26,5 @@ export function useColorScheme() {
     return {
         darkMode,
         setDarkMode,
-    }
+    };
 }

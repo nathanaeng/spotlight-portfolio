@@ -5,16 +5,16 @@ const Default = ({ data }) => {
     const info = data[1];
     let thumbnail;
     if (info === 'Georgia Institute of Technology') {
-        thumbnail = <img className={styles["thumbnail-gt"]} src={getImageURL("GT.png")} alt="thumbnail" width="50px" />;
+        thumbnail = <img className={styles['thumbnail-gt']} src={getImageURL('GT.png')} alt="thumbnail" width="50px" />;
     }
 
     return (
-        <div className={styles["result-box"]}>
+        <div className={styles['result-box']}>
             {thumbnail}
-            <h5 className={styles["result-text"]}>{data[1]}</h5>
-            <span className={styles["result-label"]}>{data[0]}</span>
+            <h5 className={styles['result-text']}>{data[1]}</h5>
+            <span className={styles['result-label']}>{data[0]}</span>
         </div>
     );
-}
+};
 
 export default Default;
