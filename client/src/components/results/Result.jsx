@@ -8,7 +8,7 @@ import Default from './result-types/Default.jsx';
 import ResumeResult from './result-types/resume/ResumeResult.jsx';
 
 const Result = ({ data }) => {
-    const type = data[0];
+    const type = data.label;
 
     switch (type) {
         case 'resume':

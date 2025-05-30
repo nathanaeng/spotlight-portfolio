@@ -1,7 +1,7 @@
 .position {
     margin-left: 1rem;
     margin-bottom: 0.5rem;
-    font-size: 16px;
+    font-size: 14px;
     font-style: italic;
     color: var(--text-color);
 }
@@ -22,10 +22,14 @@
     color: var(--text-color);
 }
 
-.work-description {
+ul.work-description {
     margin-right: 1rem;
-    font-size: 18px;
+    font-size: 16px;
     color: var(--text-color);
+
+    li {
+        padding-left: 1rem;
+    }
 }
 
 @media (max-width: 600px) {

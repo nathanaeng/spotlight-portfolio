@@ -1,6 +1,7 @@
 import Resume from './Resume.jsx';
+import resumePDF from '../../../../documents/Resume.pdf';
 import { FiDownload } from 'react-icons/fi';
-import { MdClose } from 'react-icons/md';
+import { CgClose } from 'react-icons/cg';
 import { IconContext } from 'react-icons/lib';
 import styles from './Resume.module.css';
 
@@ -13,11 +14,11 @@ const ResumeModal = () => {
                 <div className="modal-content">
                     <IconContext.Provider value={{size: '100%'}}>
                     <a className={styles['close-modal']} href="/" data-bs-dismiss="modal" aria-label="Close">
-                        <MdClose className={styles['resume-icon']} />
+                        <CgClose className={styles['resume-icon']} strokeWidth={0.2} />
                     </a>
                     <div className="modal-body">
                         <Resume scale={s} />
-                        <a className={styles['resume-download']} href="/documents/Resume.pdf" download>
+                        <a className={styles['resume-download']} href={resumePDF} download="Resume.pdf">
                             <FiDownload className={styles['resume-icon']} />
                         </a>
                     </div>

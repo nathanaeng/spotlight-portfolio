@@ -5,17 +5,23 @@
   --scale: calc((var(--new-width) - (var(--search-padding) * 0.5)) / var(--new-width));
 }
 
+@media (max-width: 600px) {
+    :root {
+        --search-padding: 8;
+    }
+}
+
 body {
   /* Colors */
   --bg-color: #FFF;
-  --text-color: rgb(56, 56, 56);;
+  --text-color: rgb(56, 56, 56);
   --secondary-text-color: rgb(97, 97, 97);
   --placeholder-color: rgb(97, 97, 97);
   --content-box-bg: rgba(100, 100, 100, 0.2);
   --content-box-shadow-color: rgba(122, 122, 122, 0.2);
   --result-box-color: rgba(255, 255, 255, 0.4);
   --searchbar-bg-color: rgba(255, 255, 255, 0.4);
-  --search-icon-color: rgb(29, 130, 225);
+  --search-icon-color: rgb(56, 56, 56);
   --search-input-color: black;
   --search-cancel-color: black;
   --title-color: -webkit-linear-gradient(rgb(246, 177, 49), rgb(62, 156, 255));
@@ -59,20 +65,21 @@ of the window is small (looks better) */
   top: 50px;
   background-color: var(--content-box-bg);
   padding: calc(var(--search-padding) * 1px);
-  border-radius: 0.3rem;
+  border-radius: 4rem / 2.25rem;
   box-shadow: 0px 0px 10px 2px var(--content-box-shadow-color);
   width: 90%;
   max-width: calc(var(--content-width) * 1px);
-  transition: scale 0.5s ease, transform 0.5s ease;
+  transition: scale 0.5s ease, transform 0.5s ease, border-radius 0.3s ease;
   transform-origin: top;
   scale: 0.5 0.75;
 }
 
 .expand {
   scale: 1;
-  transition: scale 0.5s ease, transform 0.5s ease;
+  transition: scale 0.5s ease, transform 0.5s ease, border-radius 0.3s ease;
   transform-origin: top;
   transform: translateY(-170px);
+  border-radius: 2.5rem;
 }
 
 @media (min-width: 600px) {
@@ -80,6 +87,21 @@ of the window is small (looks better) */
     transform: translateY(-314px) !important;
   }
 }
+
+/* @media (max-width: 600px) {
+  .content .expand {
+    animation: slideUp 0.5s ease;
+  }
+
+  @keyframes slideUp {
+    0% {
+      transform: translateY(-170px);
+    }
+    100% {
+      transform: translateY(-614px);
+    }
+  }
+} */
 
 .blur {
   filter: blur(12px);
@@ -139,7 +161,6 @@ of the window is small (looks better) */
     padding: 10px !important;
   }
 }
-
 @media (max-width: 600px) {
   .all {
     margin-bottom: 4rem;
@@ -150,10 +171,11 @@ of the window is small (looks better) */
     max-width: 610px;
     scale: 1;
     margin-bottom: 3rem;
+    border-radius: 2rem;
   }
 
   .expand {
-    transform: translateY(0px) !important;
+    transform: translateY(-100px) !important;
   }
 
   .title {

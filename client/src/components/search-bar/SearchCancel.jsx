@@ -1,4 +1,4 @@
-import { MdClose } from 'react-icons/md';
+import { CgClose } from 'react-icons/cg';
 import searchbarStyles from './Searchbar.module.css';
 import styles from './SearchCancel.module.css';
 
@@ -11,7 +11,7 @@ const SearchCancel = ({ query, clear }) => {
 
     return (
         <button type="reset" className={styles['search-cancel']} onMouseDown={e => clearInput(e)} style={query ? { display: 'block'} : {display: 'none'}}>
-            <MdClose size={27} />
+            <CgClose size={27} strokeWidth={0.2} />
         </button>
     );
 };
