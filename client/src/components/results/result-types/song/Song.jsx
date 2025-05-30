@@ -10,7 +10,7 @@ const Song = ({ data }) => {
                     <img className={songStyles['thumbnail-song']} src={getImageURL(data.image)} alt="thumbnail" width="100px" />
                 </a>
                 <div className={songStyles['song-grid-right']}>
-                    <h5 className={styles['result-text']}>{data.title}</h5>
+                    <h5 className={styles['result-text']}>{data.name}</h5>
                     <h6 className={styles['result-by']}>{data.by}</h6>
                     <div className={styles['result-label']}>{data.label}</div>
                 </div>

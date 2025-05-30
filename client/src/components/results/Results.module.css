@@ -41,14 +41,14 @@
     line-height: 30px;
     margin-left: 1rem;
     margin-right: 1rem;
+    margin-bottom: 0.25rem;
     font-size: 18px;
     color: var(--text-color);
 }
 
 .result-label {
-    position: relative;
     margin-left: 1rem;
-    top: -0.2rem;
+    margin-top: auto;
     opacity: 0.75;
     font-size: 14px;
     color: var(--secondary-text-color);
@@ -56,7 +56,7 @@
 
 .result-by {
     margin-left: 1rem;
-    font-size: 18px;
+    font-size: 14px;
     color: var(--text-color);
 }
 
