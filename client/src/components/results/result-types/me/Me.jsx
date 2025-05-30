@@ -6,8 +6,8 @@ const Me = ({ data }) => {
     return (
         <div className={styles['result-box']}>
             <img className={meStyles['result-me']} src={getImageURL('me.jpg')} alt="me" />
-            <h5 className={styles['result-text']}>{data[1]}</h5>
-            <div className={styles['result-label']}>{data[0]}</div>
+            <h5 className={styles['result-text']}>{data.info}</h5>
+            <div className={styles['result-label']}>{data.label}</div>
         </div>
     );
 };

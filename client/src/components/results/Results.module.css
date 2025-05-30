@@ -3,6 +3,7 @@
     overflow-y: auto;
     overflow-x: hidden;
     margin-top: calc(var(--search-padding) * 1px);
+    border-radius: 0 0 1.5rem 1.5rem;
 }
 
 .results-container:empty {
@@ -11,7 +12,7 @@
 
 .result-box {
     position: relative;
-    border-radius: 0.4rem;
+    border-radius: 0.5rem;
     background-color: var(--result-box-color);
     padding-top: 8px;
     padding-bottom: 8px;
@@ -40,22 +41,22 @@
     line-height: 30px;
     margin-left: 1rem;
     margin-right: 1rem;
-    font-size: 20px;
+    margin-bottom: 0.25rem;
+    font-size: 18px;
     color: var(--text-color);
 }
 
 .result-label {
-    position: relative;
     margin-left: 1rem;
-    top: -0.2rem;
+    margin-top: auto;
     opacity: 0.75;
-    font-size: 16px;
+    font-size: 14px;
     color: var(--secondary-text-color);
 }
 
 .result-by {
     margin-left: 1rem;
-    font-size: 18px;
+    font-size: 14px;
     color: var(--text-color);
 }
 

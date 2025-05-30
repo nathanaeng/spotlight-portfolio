@@ -1,5 +1,5 @@
 import { Document, Page } from 'react-pdf';
-import resume from '/public/documents/Resume.pdf';
+import resume from '../../../../documents/Resume.pdf';
 import { pdfjs } from 'react-pdf';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';

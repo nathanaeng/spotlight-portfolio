@@ -29,12 +29,19 @@ const Searchbar = ({ fetchData, clearResults }) => {
 
         const toggleFocus = e => {
             const resumeModal = document.querySelector('.modal.resume');
+            const resultsContainer = document.querySelector(`.${styles['results-container']}`);
+            const hasResults = resultsContainer && !resultsContainer.classList.contains('empty');
     
             if (input === document.activeElement) {
                 content.classList.add('expand');
                 container.classList.add('blur');
                 dm.classList.add('blur');
-            } else if (!content.contains(e.target) && !dm.contains(e.target) && !resumeModal.contains(e.target)) {
+            } else if (
+                (!content.contains(e.target) &&
+                !dm.contains(e.target) &&
+                !resumeModal.contains(e.target)) ||
+                (e.type === 'blur' && !hasResults)
+            ) {
                 content.classList.remove('expand');
                 container.classList.remove('blur');
                 dm.classList.remove('blur');
@@ -54,10 +61,14 @@ const Searchbar = ({ fetchData, clearResults }) => {
 
         document.addEventListener('click', e => toggleFocus(e));
         input.addEventListener('keydown', e => escapeKeyFocus(e));
+        input.addEventListener('focus', () => toggleFocus({ target: input }));
+        input.addEventListener('blur', (e) => toggleFocus(e));
         
         return () => {
             document.removeEventListener('click', toggleFocus);
             input.removeEventListener('keydown', escapeKeyFocus);
+            input.removeEventListener('focus', () => toggleFocus({ target: input }));
+            input.removeEventListener('blur', (e) => toggleFocus(e));
         };
     }, [clear]);
 
